@@ -37,6 +37,7 @@ export default {
     return {};
   },
   asyncData (context) {
+    // create object representation of model
     const jsonObj = {
       'items': [
         {
@@ -44,16 +45,14 @@ export default {
         }
       ]
     };
-
+    // init the converter
     let jsonConvert = new JsonConvert();
-    jsonConvert.ignorePrimativeChecks = false;
-    jsonConvert.operationMode = OperationMode.ENABLE;
-    jsonConvert.valueCheckingMode = ValueCheckingMode.DISALLOW_NULL;
-
+    // attempt to create an Obj instance from the JS object
+    // error gets thrown here
     let obj = jsonConvert.deserializeObject(jsonObj, Obj);
-
+    // log out the obj
     console.log(obj);
-
+    // check to make sure that the "items" on the obj are actual instances of Item by calling method in class
     if (obj.items) {
       obj.items.map(item => console.log(item.getBar()));
     }
