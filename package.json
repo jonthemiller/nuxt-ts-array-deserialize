@@ -1,0 +1,20 @@
+{
+  "name": "nuxt-ts-example",
+  "version": "1.0.0",
+  "description": "My geometric Nuxt.js project",
+  "author": "Jon Miller",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate"
+  },
+  "dependencies": {
+    "@nuxt/typescript-build": "^0.5.6",
+    "@nuxt/typescript-runtime": "^0.3.8",
+    "json2typescript": "^1.2.3",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
