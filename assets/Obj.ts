@@ -1,5 +1,5 @@
 import { JsonObject, JsonProperty } from 'json2typescript';
-import Item from 'assets/Item';
+import Item from './Item';
 
 @JsonObject('Obj')
 export default class Obj {

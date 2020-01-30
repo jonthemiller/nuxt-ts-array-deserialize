@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import { JsonConvert, OperationMode, ValueCheckingMode } from 'json2typescript';
+import { JsonConvert } from 'json2typescript';
 import Obj from 'assets/Obj';
 
 export default {
@@ -49,15 +49,15 @@ export default {
     let jsonConvert = new JsonConvert();
     // attempt to create an Obj instance from the JS object
     // error gets thrown here
-    let obj = jsonConvert.deserializeObject(jsonObj, Obj);
+    let convertedObj = jsonConvert.deserializeObject(jsonObj, Obj);
     // log out the obj
-    console.log(obj);
+    console.log(convertedObj);
     // check to make sure that the "items" on the obj are actual instances of Item by calling method in class
-    if (obj.items) {
-      obj.items.map(item => console.log(item.getBar()));
+    if (convertedObj.items) {
+      convertedObj.items.map(item => console.log(item.getBar()));
     }
     return {
-      obj
+      convertedObj
     };
   }
 };
