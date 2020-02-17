@@ -27,11 +27,13 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { JsonConvert } from 'json2typescript';
 import Obj from 'assets/Obj';
+// import { Context } from '@nuxt/types';
+import Vue from 'vue';
 
-export default {
+export default Vue.component('Index', {
   name: 'Index',
   data () {
     return {};
@@ -39,9 +41,10 @@ export default {
   asyncData (context) {
     // create object representation of model
     const jsonObj = {
-      'items': [
+      // aString: 'true'
+      items: [
         {
-          'bar': 'somestring'
+          bar: 'somestring'
         }
       ]
     };
@@ -60,7 +63,7 @@ export default {
       convertedObj
     };
   }
-};
+});
 </script>
 
 <style>

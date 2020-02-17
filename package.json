@@ -5,7 +5,7 @@
   "author": "Jon Miller",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
+    "dev": "nuxt",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate"
